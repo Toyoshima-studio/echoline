@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcholIne Official Site</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      color: #fff;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    /* 背景設定 */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('https://yurucamelife.com/wp-content/uploads/2020/09/DSC_0830-Edit-3.jpg')
+        center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      font-family: "Cinzel", serif;
+      letter-spacing: 0.1em;
+      color: #fff;
+      text-shadow: 0 0 10px #ff007f, 0 0 20px #ffcc00;
+      z-index: 2;
+      animation: glitch 2s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 #ff007f, -2px 0 #00ffff; }
+      20% { text-shadow: -2px 0 #ff007f, 2px 0 #00ffff; }
+      40% { text-shadow: 2px 2px #ff007f, -2px -2px #00ffff; }
+      60% { text-shadow: -2px -2px #ff007f, 2px 2px #00ffff; }
+      100% { text-shadow: 2px 0 #ff007f, -2px 0 #00ffff; }
+    }
+
+    .hero button {
+      z-index: 2;
+      padding: 12px 25px;
+      margin-top: 30px;
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #ff007f;
+      border-color: #ff007f;
+      box-shadow: 0 0 20px #ff007f;
+    }
+
+    /* 各セクション */
+    section {
+      padding: 100px 10%;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    section:nth-of-type(1) { animation-delay: 1s; }
+    section:nth-of-type(2) { animation-delay: 2s; }
+    section:nth-of-type(3) { animation-delay: 3s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-left: 5px solid #ff007f;
+      padding-left: 10px;
+    }
+
+    #intro p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    /* キャラクター */
+    .characters {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .char {
+      width: 250px;
+      text-align: center;
+    }
+
+    .char img {
+      width: 100%;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .char img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff007f;
+    }
+
+    /* トレーラー */
+    iframe {
+      width: 80%;
+      height: 450px;
+      border: none;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 50px 0;
+      background: #111;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>ECHOLINE</h1>
+    <button>▶ Play Trailer</button>
+  </div>
+
+  <section id="intro">
+    <h2>INTRODUCTION</h2>
+    <p>
+      音が、街を救う。<br>
+      近未来都市「シブヤ・エコーライン」。<br>
+      ノイズと共鳴する少年少女たちの物語が、今、始まる。
+    </p>
+  </section>
+
+  <section id="characters">
+    <h2>CHARACTERS</h2>
+    <div class="characters">
+      <div class="char">
+        <img src="https://via.placeholder.com/250x350" alt="Character A">
+        <p>主人公・アキト</p>
+      </div>
+      <div class="char">
+        <img src="https://via.placeholder.com/250x350" alt="Character B">
+        <p>ヒロイン・ユナ</p>
+      </div>
+      <div class="char">
+        <img src="https://via.placeholder.com/250x350" alt="Character C">
+        <p>ライバル・カイト</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="trailer">
+    <h2>TRAILER</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    © 豊島studio / ECHOLINE PROJECT
+  </footer>
+<style>
+  /* 背景画像を持つヒーローエリア */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url('https://yurucamelife.com/wp-content/uploads/2020/09/DSC_0830-Edit-3.jpg') center/cover no-repeat;
+    overflow: hidden;
+  }
+
+  /* ノイズエリア（常に透明） */
+  .hero-glitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2; /* 背景の上、テキストの下に配置したい場合は調整 */
+  }
+</style>
+
+<script>
+function createHeroGlitch() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  const glitch = document.createElement('div');
+  glitch.classList.add('hero-glitch');
+  hero.appendChild(glitch);
+
+  glitch.style.top = Math.random() * 100 + '%';
+  glitch.style.height = Math.random() * 10 + 2 + 'px';
+  glitch.style.background = `
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,0,150,0.6) 0px,
+      rgba(255,255,0,0.7) 3px,
+      rgba(0,255,255,0.7) 6px,
+      rgba(255,255,255,0.4) 9px,
+      rgba(0,0,0,0.3) 12px
+    )
+  `;
+  glitch.style.filter = 'blur(0.3px) contrast(200%) brightness(1.3)';
+  glitch.style.mixBlendMode = 'screen';
+  glitch.style.opacity = 0.9;
+
+  glitch.animate(
+    [
+      { transform: 'translateX(0px)', opacity: 1 },
+      { transform: 'translateX(-6px)', opacity: 0.8 },
+      { transform: 'translateX(6px)', opacity: 0.9 },
+      { transform: 'translateX(-3px)', opacity: 0.6 },
+      { transform: 'translateX(0px)', opacity: 0.4 },
+    ],
+    {
+      duration: 60 + Math.random() * 40,
+      iterations: 1,
+      easing: 'steps(4, end)',
+    }
+  ).onfinish = () => glitch.remove();
+}
+
+setInterval(() => {
+  if (Math.random() > 0.85) createHeroGlitch();
+}, 150);
+</script>
+
+</body>
+</html>
